@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div  class="bg-black">
+        <h1 id="heading" class="heading">DOM learning <span style="display: none;">hii! there</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ea! </p>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        
+        <ul id="parent">
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            
+        </ul>
+    </div>
+    // innerText - it return the visible text contained in a node
+        // textContent - it returns the full text
+        //innerHTML - it return content with tag
+</body>
+<script>
+   const list = document.querySelectorAll("h2");
+   list.forEach( (i)=>{
+     i.style.color="red";
+   })
+    // querySelectorAll returns node list
+   //if we want to apply map on node list we first change node list to array
+
+   //for ex. 
+ const listbecomearray  = Array.from(list);
+
+ console.log(listbecomearray);
+
+ listbecomearray.map( (item)=> item.style.backgroundColor="green");
+
+ const parent = document.getElementById("parent");
+   console.log(parent.children[0].innerHTML);
+
+
+   
+</script>
+
+</html>
